@@ -1,8 +1,6 @@
 package ru.netology.hibernate.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.NamedNativeQuery;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,11 +15,13 @@ import java.io.Serializable;
 
 @Embeddable
 public class PersonKey implements Serializable {
+
     @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
     private String surname;
+
     @Column(nullable = false)
     private int age;
 }
