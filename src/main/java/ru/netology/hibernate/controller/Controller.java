@@ -23,16 +23,16 @@ public class Controller {
 
     @GetMapping("/persons/city")
     public List<Person> findPersonByCityOfLiving(String city) {
-        return personRepository.findPersonByCityOfLiving(city);
+        return personRepository.findDyPersonCityQuery(city);
     }
 
     @GetMapping("/persons/age")
     public List<Person> findByPersonKeyAge(int age) {
-        return personRepository.findPersonByPersonKey_AgeBeforeOrderByPersonKeyAsc(age);
+        return personRepository.findPersonByAgeQuery(age);
     }
     @GetMapping("/persons/name&surname")
     public Optional<Person> findByPersonKeyAge(String name, String surname) {
-        return personRepository.findPersonByPersonKey_NameAndPersonKey_Surname(name,surname);
+        return personRepository.findPersonByNameAndSurnameQuery(name,surname);
     }
 }
 

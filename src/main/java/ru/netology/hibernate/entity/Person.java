@@ -13,10 +13,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity(name = "Person")
 @Table(name = "person")
-//@NamedNativeQuery(
-//        name = "findPersonByCity",
-//        query = "select * from homework.person p where p.city_of_living = :city"
-//)
+@NamedNativeQuery(
+        name = "findPersonByCity",
+        query = "select * from homework.person p where p.city_of_living = :city"
+)
 
 public class Person {
     @EmbeddedId
